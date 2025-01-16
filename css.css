@@ -53,7 +53,7 @@ sub{font-size: 0.6vw;}
 .nonee{text-decoration: none; color: whitesmoke;}
 .mblok{cursor: pointer;}
 
-.nemo{width: 30vw; background-image: url(fotos/nemo.png); background-size: cover; height: 22vw;}
+.nemo{width: 30vw; background-size: cover; height: 22vw;}
 
 .ramkag{border-color: black; border-style: solid; text-align: center;}
 
