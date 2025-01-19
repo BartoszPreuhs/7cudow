@@ -4,6 +4,9 @@
   margin: 0 auto;
 }
 
+body{overflow-x: hidden;
+background-color: #77A5E6;}
+
 .blok {
   height: 20%; 
   background-color: #90E8E3; 
@@ -16,7 +19,7 @@
 }
 
 * {
-  padding: 0;
+  padding: none;
 }
 
 .stopka {
@@ -25,6 +28,9 @@
   clear: both; 
   background-color: #4682b4;
   color: white;
+  position: fixed;
+  top: 95%;
+  width: 100%;
 }
 
 .cos {
@@ -53,19 +59,12 @@ sub{font-size: 0.6vw;}
 .nonee{text-decoration: none; color: whitesmoke;}
 .mblok{cursor: pointer;}
 
-.nemo{width: 30vw; background-size: cover; height: 22vw;}
+.nemo{width: 30vw; background-image: url(fotos/nemo.png); background-size: cover; height: 22vw;}
 
-.ramkag{border-color: black; border-style: solid; text-align: center;}
+.blokok{
+  background-size: 18%;
+}
 
-.center{margin: auto;}
-
-.galtab{border-color: black; margin-left: auto; margin-right: auto; border-style: double; width: 60vw; height: 30.7vw; border-bottom: none;}
-
-.ramka{border-color: black; border-style: solid; text-align: center;}
-
-.mini{width: 7.5vw;}
-
-.normal{height: 20vw;}
 
 @media only screen and (max-width: 600px) {/*AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA */
   
@@ -144,7 +143,7 @@ sub{font-size: 0.6vw;}
 
   .cos {
     width: 100%; 
-    height: 80%; 
+    height: 90%; 
     float: right; 
     background-color: #d3d3d3;
     text-align: center;
@@ -167,8 +166,10 @@ sub{font-size: 0.6vw;}
   .navvv1{position: fixed; width: 10vw; background-color: #4682b4; top: 95%; left: 80%; font-size: 2.5vw;}
   .navvv2{position: fixed; width: 10vw; background-color: #4682b4; top: 95%; left: 90%; font-size: 2.5vw;}
 
-    .ifram{display: none; visibility: none;}
-
+  .prev{
+    left: 0px;
+  }
+  .ifram{width: 30vw; height:20vh;}
   }
 
 @media only screen and (min-width: 601px) and (max-width: 1200px) { /*AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA */
@@ -210,7 +211,7 @@ sub{font-size: 0.6vw;}
 
   .cos {
     width: 85%;
-    height: 75%;
+    height: 85%;
     text-align: justify;
     background-color: #BBD6E9;
     position: absolute;
@@ -234,7 +235,7 @@ sub{font-size: 0.6vw;}
 
   .domek:hover{height: 3.2vw; transition: all 0.3s ease;}
 
-  .nemo{background-image: url(fotos/dory.png); margin-top: -60vh; margin-left: 2vw;}
+  .nemo{background-image: none; margin-top: 60vh; margin-left: 2vw;}
 
   .ciekaw{font-size: 2.5vw; margin-right: 10vw; margin-top: 60vh; float: right;}
 
@@ -249,7 +250,7 @@ sub{font-size: 0.6vw;}
   .navvv1{position: fixed; width: 6vw; background-color: #4682b4; top: 95%; left: 88%; font-size: 1.7vw;}
   .navvv2{position: fixed; width: 6vw; background-color: #4682b4; top: 95%; left: 94%; font-size: 1.7vw;}
 
-  .ifram{display: none; visibility: none;}
+  .ifram{width: 20vw; height: 20vh;}
   
 }
 
@@ -285,7 +286,7 @@ sub{font-size: 0.6vw;}
   }
 
   .cos {
-    height: 65%;
+    height: 75vh;
     text-align: justify;
     background-color: #BBD6E9;
   }
@@ -310,7 +311,7 @@ sub{font-size: 0.6vw;}
 
   .fishimg{width: 27vw;}
 
-  .nemo{margin-top: -45vh; margin-left: 60vw; height: 18vw}
+  .nemo{margin-top: -45vh; margin-left: 60vw;}
 
   .ciekaw{font-size: 2.7vw; margin-top: 5vw;}
 
@@ -319,4 +320,37 @@ sub{font-size: 0.6vw;}
   sub{font-size: 1vw;}
 
   .gi{font-size: 1.2vw;}
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.galimg{height: 20vw; margin-left: auto;}
+
+@keyframes zmien-zdjecie {
+  0% {transform: translateX(0%);}
+  100% {transform: translateX(-120%)}
+}
+
+
+.slajdy {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  animation: zmien-zdjecie 8s infinite linear; 
+}
+
+.slajdy img {
+  height: 58vh;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.duze-zdjecie {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  margin-right: 20px;
+  position: relative;
 }
