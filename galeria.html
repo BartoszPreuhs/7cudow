@@ -5,6 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Strona główna</title>
     <link rel="stylesheet" href="css.css">
+    <script>
+            let slideIndex = 1;
+    showSlides(slideIndex);
+
+    // Next/previous controls
+    function plusSlides(n) {
+    showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+    showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("demo");
+    let captionText = document.getElementById("caption");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+    captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+    </script>
 </head>
 <body class="body1">
     <header id="gora">
@@ -33,34 +65,26 @@
     <article>
     </div>
     <div class="cos">
-        <div class="galtab">
-            <table class="center">
-                <tr>
-                    <td colspan=4 class="ramkag"><img class="normal" src="fotos/blahaj.jpg" alt="blahaj"></td>
-    
-                </tr>
-                <tr>
-                    <td class="ramka"><a href=galeria.html><img class="mini" src="fotos/blahaj.jpg" alt="blahaj"></a></td>
-                    <td class="ramka"><a href=gal1.html><img class="mini" src="fotos/bojownik.jpg" alt="bojownik"></a></td>
-                    <td class="ramka"><a href=gal2.html><img class="mini" src="fotos/gupik.jpg" alt="gupik"></a></td>
-                    <td class="ramka"><a href=gal3.html><img class="mini" src="fotos/nemoo.jpg" alt="nemo"></a></td>
-                </tr>
-                <tr>
-                    <td class="ramka"><a href=gal4.html><img class="mini" src="fotos/pupfish.jpg" alt="pupfish"></a></td>
-                    <td class="ramka"><a href=gal4.html><img class="mini" src="fotos/zebra.jpg" alt="zebra"></a></td>
-                    <td class="ramka"><a href=gal4.html><img class="mini" src="fotos/paletka.png" alt="paletka"></a></td>
-                </tr>
-            </table><br><br>
-        </div>
+        <section class="duze-zdjecie">
+            <figure class="slajdy">
+            <img src="fotos/blahaj.jpg" alt="Zdjęcie 1">
+            <img src="fotos/bojownik.jpg" alt="Zdjęcie 2">
+            <img src="fotos/gupik.jpg" alt="Zdjęcie 3">
+            <img src="fotos/nemoo.jpg" alt="Zdjęcie 4">
+            <img src="fotos/pupfish.jpg" alt="Zdjęcie 5">
+            <img src="fotos/zebra.jpg" alt="Zdjęcie 6">
+            <img src="fotos/paletka.png" alt="zdjecie 7">
+            </figure>
+        </section>
     </div>
     </article>
 
     <footer>
+        <div class="stopka">
+            Bartosz Preuhs
+        </div>
         <div class="navvv1"><a href="#gora" class="nonee">Do góry</a></div>
         <div class="navvv2"><a href="#dol" class="nonee">Do dołu</a></div>
-    <div class="stopka">
-        <br>Bartosz Preuhs
-    </div>
     </footer>
     </main>
 </body>
