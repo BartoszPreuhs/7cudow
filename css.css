@@ -79,6 +79,7 @@ sub{font-size: 0.6vw;}
         color:black;
         text-shadow: #68B3AF 2px 3px;
     }
+}
 
 @media only screen and (max-width: 600px) {/*AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA */
   
