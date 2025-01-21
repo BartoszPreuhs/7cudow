@@ -65,21 +65,11 @@ sub{font-size: 0.6vw;}
   background-size: 18%;
   border-radius: 10px;
   animation-name: titl;
-  animation-duration: infinite;
+  animation-duration: 10s;
   animation-timing-function: linear;
   animation-fill-mode: forwards;
 }
 
-@keyframes titl {
-    from {
-        color:#5995923b;
-        text-shadow: none;
-    }
-    to {
-        color:black;
-        text-shadow: #68B3AF 2px 3px;
-    }
-}
 
 @media only screen and (max-width: 600px) {/*AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA */
   
@@ -158,7 +148,7 @@ sub{font-size: 0.6vw;}
 
   .cos {
     width: 100%; 
-    height: 110%; 
+    height: 100%; 
     float: right; 
     background-color: #d3d3d3;
     text-align: center;
@@ -185,13 +175,9 @@ sub{font-size: 0.6vw;}
     left: 0px;
   }
   .ifram{width: 30vw; height:20vh;}
-  
-  .slajdy img{height: 20vh;}
   }
 
 @media only screen and (min-width: 601px) and (max-width: 1200px) { /*AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA */
-  
-  .slajdy img{height: 40vh;}
 
   .galtab{height: 34vw; scale: 120%; margin-top: 10%;}
 
@@ -339,9 +325,6 @@ sub{font-size: 0.6vw;}
   sub{font-size: 1vw;}
 
   .gi{font-size: 1.2vw;}
-  .slajdy img {
-    height: 58vh;
-  }
 }
 
 * {
@@ -352,17 +335,19 @@ sub{font-size: 0.6vw;}
 
 @keyframes zmien-zdjecie {
   0% {transform: translateX(0%);}
-  100% {transform: translateX(-260%)}
+  100% {transform: translateX(-120%)}
 }
+
 
 .slajdy {
   display: flex;
   width: 100%;
   height: 100%;
-  animation: zmien-zdjecie 10s infinite linear; 
+  animation: zmien-zdjecie 8s infinite linear; 
 }
 
 .slajdy img {
+  height: 58vh;
   object-fit: cover;
   flex-shrink: 0;
 }
@@ -374,3 +359,14 @@ sub{font-size: 0.6vw;}
   margin-right: 20px;
   position: relative;
 }
+
+  @keyframes titl {
+      from {
+          color:#5995923b;
+          text-shadow: none;
+      }
+      to {
+          color:black;
+          text-shadow: #68B3AF 2px 3px;
+      }
+  }
