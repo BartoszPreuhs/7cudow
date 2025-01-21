@@ -143,7 +143,7 @@ sub{font-size: 0.6vw;}
 
   .cos {
     width: 100%; 
-    height: 90%; 
+    height: 110%; 
     float: right; 
     background-color: #d3d3d3;
     text-align: center;
@@ -215,7 +215,7 @@ sub{font-size: 0.6vw;}
 
   .cos {
     width: 85%;
-    height: 85%;
+    height: 100%;
     text-align: justify;
     background-color: #BBD6E9;
     position: absolute;
@@ -290,7 +290,7 @@ sub{font-size: 0.6vw;}
   }
 
   .cos {
-    height: 75vh;
+    height: 100vh;
     text-align: justify;
     background-color: #BBD6E9;
   }
